@@ -1,0 +1,56 @@
+@import '../../../style/variables.scss';
+
+.expense-item {
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $black-color;
+  box-shadow: inset 20px 20px 60px $light-gray-color, inset -20px -20px 60px $white-color;
+  border-radius: $border-radius;
+  transition: all .5s ease-in-out;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    transition: all .5s ease-in-out;
+  }
+
+  &__date {
+    width: 130px;
+  }
+
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+  }
+
+  &__title {
+    display: block;
+    width: 100px;
+    word-wrap: break-word;
+  }
+
+  &__changes {
+    display: flex;
+    width: 120px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  &__close {
+    margin-left: 8px;
+    padding: 8px;
+    color: $white-color;
+  }
+}

@@ -1,0 +1,12 @@
+@import '../style/variables.scss';
+
+.user-menu {
+  display: block;
+  height: 100vh;
+  min-width: 180px;
+  background-color: $black-color;
+
+  &__info {}
+
+  &__settings {}
+}

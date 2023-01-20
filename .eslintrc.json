@@ -21,12 +21,6 @@
     "react/react-in-jsx-scope": "off",
     "spaced-comment": "error",
     "quotes": ["error", "single"],
-    "no-duplicate-imports": "error",
-    "tabWidth": 2,
-    "printWidth": 100,
-    "singleQuote": true,
-    "trailingComma": "all",
-    "jsxSingleQuote": true,
-    "bracketSpacing": true
+    "no-duplicate-imports": "error"
   }
 }

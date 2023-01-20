@@ -1,0 +1,12 @@
+.App {
+  &__container {
+    margin: 0 auto;
+    display: flex;
+    max-width: 1124px;
+    height: 100vh;
+  }
+
+  &__block {
+    width: 100%;
+  }
+}
