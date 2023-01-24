@@ -5,11 +5,12 @@ import './CustomButton.scss';
 type Props = {
   title: string;
   onClick?: () => void;
+  width: string;
 };
 
-export const CustomButton: React.FC<Props> = ({ title, onClick }) => {
+export const CustomButton: React.FC<Props> = ({ title, onClick, width }) => {
   return (
-    <button className="button" onClick={onClick}>
+    <button className="button" style={{ width: width }} onClick={onClick}>
       {title}
     </button>
   );

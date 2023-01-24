@@ -1,0 +1,30 @@
+@import '../../style/variables.scss';
+
+.chart-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 20px;
+    height: 150px;
+    background-color: $white-color;
+    border: 1px solid $black-color;
+    border-radius: 10px;
+  }
+
+  &__fill {
+    right: 5px;
+    background-color: $tangelo-color;
+    border-radius: 10px;
+    transition: all 0.5s ease-out;
+  }
+
+  &__label {
+    margin-top: 1rem;
+  }
+}

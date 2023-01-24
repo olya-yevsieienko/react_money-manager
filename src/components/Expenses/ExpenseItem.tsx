@@ -43,17 +43,24 @@ export const ExpenseItem: React.FC<Props> = ({ title, amount, date }) => {
 
       {!buttonsVisible ? (
         <div className="expense-item__changes">
-          <CustomButton title="Change" onClick={handleButtonsVisible} />
+          <CustomButton
+            title="Change"
+            width="90px"
+            onClick={handleButtonsVisible}
+          />
         </div>
       ) : (
         <div className="expense-item__changes">
           <div className="expense-item__buttons">
-            <CustomButton title="Save" onClick={handleChangeData} />
+            <CustomButton
+              title="Save"
+              width="90px"
+              onClick={handleChangeData}
+            />
+            <p className="expense-item__close" onClick={handleButtonsVisible}>
+              X
+            </p>
           </div>
-
-          <p className="expense-item__close" onClick={handleButtonsVisible}>
-            X
-          </p>
         </div>
       )}
     </div>

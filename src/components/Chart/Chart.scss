@@ -1,8 +1,9 @@
-@import '../style/variables.scss';
+@import '../../style/variables.scss';
 
 .chart {
   margin-bottom: 16px;
   display: flex;
+  justify-content: space-around;
   height: 200px;
   width: 100%;
   background-color: $light-gray-color;

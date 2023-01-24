@@ -4,7 +4,8 @@
   background-color: $dark-gray-color;
 
   &__control {
-    padding: 8px 16px;
+    margin-bottom: 8px;
+    padding: 0 16px;
     display: flex;
     justify-content: flex-end;
     align-items: center;

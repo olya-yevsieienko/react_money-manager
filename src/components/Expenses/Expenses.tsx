@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
-import { ExpenseForm } from './Expenses/ExpenseForm';
-import { ExpenseItem } from './Expenses/ExpenseItem';
-import { Expense } from '../type/Expense';
-import './Expenses.scss';
-import { ExpensesFilter } from './Expenses/ExpensesFilter';
+import { ExpenseForm } from './ExpenseForm';
+import { ExpenseItem } from './ExpenseItem';
+import { Expense } from '../../type/Expense';
+import { ExpensesFilter } from './ExpensesFilter';
+import { ExpensesChart } from './ExpensesChart';
+import './style/Expenses.scss';
 
 export const Expenses = () => {
   const [expenses, setExpenses] = useState<Expense[]>([]);
@@ -31,7 +32,8 @@ export const Expenses = () => {
   };
 
   return (
-    <>
+    <div className="expenses">
+      <ExpensesChart expenses={visibleExpenses} />
       <ExpenseForm onSaveExpenseData={handleAddNewExpense} />
       <ExpensesFilter
         selectedYear={filteredYear}
@@ -39,14 +41,21 @@ export const Expenses = () => {
         onResetFilter={handleResetFilter}
       />
 
-      {visibleExpenses.map((expense) => (
-        <ExpenseItem
-          key={expense.id}
-          title={expense.title}
-          amount={expense.amount}
-          date={expense.date}
-        />
-      ))}
-    </>
+      {!visibleExpenses.length ? (
+        <p className="expenses__no-found">No expenses found</p>
+      ) : (
+        <ul>
+          {visibleExpenses.map((expense) => (
+            <li key={expense.id}>
+              <ExpenseItem
+                title={expense.title}
+                amount={expense.amount}
+                date={expense.date}
+              />
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 };
