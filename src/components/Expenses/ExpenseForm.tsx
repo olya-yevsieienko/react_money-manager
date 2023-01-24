@@ -35,10 +35,12 @@ export const ExpenseForm: React.FC<Props> = ({ onSaveExpenseData }) => {
       date: new Date(enteredDate),
     };
 
-    onSaveExpenseData(newExpense);
-    setEntederTitle('');
-    setEntederAmount('');
-    setEntederDate('');
+    if (enteredTitle && enteredAmount && enteredDate) {
+      onSaveExpenseData(newExpense);
+      setEntederTitle('');
+      setEntederAmount('');
+      setEntederDate('');
+    }
   };
 
   return (

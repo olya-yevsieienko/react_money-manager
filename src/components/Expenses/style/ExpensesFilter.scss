@@ -1,0 +1,23 @@
+@import '../../../style/variables.scss';
+
+.expense-filter {
+  background-color: $dark-gray-color;
+
+  &__control {
+    padding: 8px 16px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__label {
+    margin-right: 12px;
+    color: $white-color;
+  }
+
+  &__close {
+    padding: 8px 0 8px 12px;
+    color: $white-color;
+    cursor: pointer;
+  }
+}
